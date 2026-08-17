@@ -1,0 +1,5 @@
+Method,Subject,Thumb,Index,Middle,Ring,Little,Calibration gap (r²-R²) (Avg_r),Calibration gap (r²-R²) (Official)
+DTCNet,SUB1,0.0101,0.6488,0.7728,0.5185,0.4543,0.4809,0.4715
+DTCNet,SUB2,0.3591,0.8096,1.1559,0.9705,0.5510,0.7692,0.7189
+DTCNet,SUB3,0.2554,0.0126,0.5821,0.5834,0.0730,0.3013,0.2308
+DTCNet,Mean,0.2082,0.4903,0.8370,0.6908,0.3595,0.5171,0.4737
