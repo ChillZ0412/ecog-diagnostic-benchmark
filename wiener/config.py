@@ -1,0 +1,30 @@
+from pathlib import Path
+DATA_DIR = Path(__file__).parent / "data"
+FS_ECOG = 1000
+FS_GLOVE = 1000
+N_FINGERS = 5
+FINGER_NAMES = ["thumb", "index", "middle", "ring", "little"]
+SUBJECT_CHANNELS = {1: 62, 2: 48, 3: 64}
+TRAIN_SECONDS = 400
+TEST_SECONDS = 200
+BANDS = {"sub": (1.0, 60.0), "gamma": (60.0, 100.0), "fastgamma": (100.0, 200.0)}
+AM_WINDOW_MS = 40.0
+FS_FEATURE = int(round(1000.0 / AM_WINDOW_MS))
+AM_WINDOW_SAMPLES = int(round(FS_ECOG * AM_WINDOW_MS / 1000.0))
+MEMORY_K = 25
+FS_MAX_FEATURES = 10
+FS_TRAIN_FRACTION = 3 / 5
+PAPER_AVG_ALL = 0.48
+COMPETITION_OFFICIAL = 0.46
+FIR_METHOD = "firwin"
+FIR_NUMTAPS = {"sub": 3301, "gamma": 1001, "fastgamma": 1001}
+FIR_DTYPE = "float32"
+APPLY_NOTCH_60HZ = False
+NOTCH_FREQS = (60.0, 120.0, 180.0)
+NOTCH_Q = 30.0
+TARGET_DOWNSAMPLE = "first"
+# --- Stage 5: regressor --------------------------------------------------
+SOLVER = "pinv_normal"   # 'pinv_normal' (paper) | 'svd' | 'inv' (ablation)
+RCOND = None             # singular-value cutoff; None -> numpy default
+STANDARDIZE = False      # z-score features before solving (ablation)
+ADD_INTERCEPT = True
